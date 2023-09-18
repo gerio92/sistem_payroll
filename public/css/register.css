@@ -1,0 +1,46 @@
+/* CSS untuk register */
+
+body {
+  background-color: #353333;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(165, 0, 0, 0.1);
+}
+
+.card-title {
+  padding: 10px 0;
+}
+
+.btn-primary {
+  background-color: #007BFF;
+  border: none;
+  width: 100%; /* Menyesuaikan lebar */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-close {
+  font-size: 1rem;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+.alert-danger {
+  background-color: #F44336;
+  color: white;
+}
+
+.alert-success {
+  background-color: #4CAF50;
+  color: white;
+}
