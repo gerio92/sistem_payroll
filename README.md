@@ -27,3 +27,13 @@ Proyek ini adalah sebuah sistem informasi untuk menghitung gaji karyawan. Beriku
     ```
 
 Sekarang, proyek ini siap untuk dijalankan. Pastikan untuk melakukan konfigurasi lebih lanjut sesuai kebutuhan.
+
+untuk login
+
+jika ingin login menggunakan role supervisor
+username    : qwerty
+password    : qwerty
+
+jika ingin role staff
+username    : asdfgh
+password    : asdfgh
