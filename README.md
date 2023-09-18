@@ -31,12 +31,14 @@ Sekarang, proyek ini siap untuk dijalankan. Pastikan untuk melakukan konfigurasi
 untuk login
 
 jika ingin login menggunakan role supervisor
+
     ```
 username    : qwerty
 password    : qwerty
     ```
 
 jika ingin role staff
+
     ```
 username    : asdfgh
 password    : asdfgh
