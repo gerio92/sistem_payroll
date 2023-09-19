@@ -6,9 +6,6 @@
 
         <form action="{{ route('payroll.calculate', ['id' => $karyawan->id]) }}" method="POST">
             @csrf
-
-            <!-- Bagian Data Karyawan -->
-
             <div class="mb-3">
                 <label for="periode_gaji" class="form-label">Pilih Periode Gaji</label>
                 <select class="form-select" id="periode_gaji" name="periode_gaji">
