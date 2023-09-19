@@ -51,7 +51,6 @@
             font-weight: bold;
         }
     </style>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> --}}
 </head>
     <body>
         <div class="container">
@@ -125,17 +124,15 @@
                     <td>Rp {{ number_format($totalGaji, 0, ',', '.') }} ({{ terbilang($totalGaji) }})</td>
                 </tr>
             </table>
-        <!-- Approve Button -->
         <form action="{{ route('slipgaji.approve', $slipGaji->id) }}" method="POST">
             @csrf
             <button id="approveButton" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Approve</button>
         </form>
     </div>
     <script>
-        // JavaScript logic for approving the slip
         function approveSlip() {
             document.getElementById('keterangan').innerText = 'approve';
-            document.getElementById('approveButton').disabled = true;  // Disable the button after approval
+            document.getElementById('approveButton').disabled = true;
         }
     </script>
     </body>
