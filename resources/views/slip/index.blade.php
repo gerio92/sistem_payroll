@@ -2,7 +2,6 @@
 
 @section('styles')
 <style>
-    /* Custom styles for the table */
     .table-container {
         margin-top: 20px;
     }
