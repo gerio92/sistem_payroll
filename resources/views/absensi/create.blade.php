@@ -42,9 +42,7 @@
             <div class="d-flex justify-content-end">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-            <!-- Tambahkan opsi status absensi lainnya sesuai kebutuhan -->
         </div>
-
         <div class="mb-3">
             <label class="form-label">Pilih Karyawan</label><br>
             <div class="form-check">
@@ -64,7 +62,6 @@
                     </div>
                 @endforeach
             </div>
-            {{-- {{ $karyawan->links() }} --}}
         </div>
     </form>
 </div>
@@ -112,7 +109,7 @@
 
 <script>
     function uncheckOthers(clickedId) {
-        const checkboxes = ['hadir', 'izin', 'sakit']; // Nama-nama checkbox
+        const checkboxes = ['hadir', 'izin', 'sakit'];
         checkboxes.forEach((checkboxId) => {
             if (checkboxId !== clickedId) {
                 document.getElementById(checkboxId).checked = false;
