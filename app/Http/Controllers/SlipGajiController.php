@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
-use App\Models\Absensi; // Import model Absensi
-use App\Models\SlipGaji; // Import model SlipGaji
+use App\Models\Absensi; 
+use App\Models\SlipGaji;
 use Carbon\Carbon;
 use Barryvdh\DomPDF\PDF;
 
@@ -21,7 +21,7 @@ class SlipGajiController extends Controller
 }
     public function export()
 {
-    // Ambil hanya data slip gaji dengan keterangan 'draft'
+    // Ambil hanya data slip gaji dengan keterangan 'approve'
     $slipGaji = SlipGaji::where('keterangan', 'approve')->get();
 
     return view('slip.export', ['slipGaji' => $slipGaji]);
@@ -34,10 +34,6 @@ class SlipGajiController extends Controller
 
         // Ambil data karyawan terkait
         $karyawan = $slipGaji->karyawan;
-        
-
-        // Implementasikan logika untuk mengambil data terkait sesuai kebutuhan aplikasi
-        // Misalnya:
         $periode_gaji = $slipGaji->periode_gaji;
         $insentif = $slipGaji->insentif;
         $upahLembur = $slipGaji->lembur;
@@ -59,7 +55,6 @@ class SlipGajiController extends Controller
         
 
         $potonganBPJS = $slipGaji->potongan_bpjs;
-        // $potonganNWNP = $slipGaji -> potongan_nwnp * ($karyawan->gaji_pokok / 30);// Ganti dengan logika sesuai kebutuhan
         $potonganNWNP = $jumlahHariTidakMasuk * ($karyawan->gaji_pokok / 30);
         $totalGaji = $slipGaji->total_gaji;
 
@@ -85,8 +80,6 @@ class SlipGajiController extends Controller
         $karyawan = $slipGaji->karyawan;
         
 
-        // Implementasikan logika untuk mengambil data terkait sesuai kebutuhan aplikasi
-        // Misalnya:
         $periode_gaji = $slipGaji->periode_gaji;
         $insentif = $slipGaji->insentif;
         $upahLembur = $slipGaji->lembur;
@@ -108,7 +101,6 @@ class SlipGajiController extends Controller
         
 
         $potonganBPJS = $slipGaji->potongan_bpjs;
-        // $potonganNWNP = $slipGaji -> potongan_nwnp * ($karyawan->gaji_pokok / 30);// Ganti dengan logika sesuai kebutuhan
         $potonganNWNP = $jumlahHariTidakMasuk * ($karyawan->gaji_pokok / 30);
         $totalGaji = $slipGaji->total_gaji;
 
@@ -127,12 +119,10 @@ class SlipGajiController extends Controller
     }
     public function approveSlip($id)
     {
-        // Find the SlipGaji by ID and update the 'keterangan' field
         $slipGaji = SlipGaji::findOrFail($id);
         $slipGaji->keterangan = 'approve';
         $slipGaji->save();
 
-        // Return a response indicating success
         // return Redirect::route('slipgaji.show')->with('success', 'Slip Gaji Berhasil Di Approve');
         return redirect()->route('slipgaji.index')->with('success', 'Slip Gaji Berhasil Di Approve.');
     }
