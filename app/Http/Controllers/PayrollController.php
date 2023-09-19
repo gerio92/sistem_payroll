@@ -59,7 +59,7 @@ class PayrollController extends Controller
             // 'potongan_bpjs' => 'nullable|numeric',
             'jam_lembur' => 'required|numeric',
             'cuti' => 'nullable|numeric',
-            'periode_gaji' => 'required|numeric' // Tambahkan validasi untuk periode gaji
+            'periode_gaji' => 'required|numeric'
         ]);
 
         // Mendapatkan data karyawan berdasarkan ID
