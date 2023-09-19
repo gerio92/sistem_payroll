@@ -1,6 +1,6 @@
 # Sistem Informasi Penghitung Gaji
 
-Proyek ini adalah sebuah sistem informasi untuk menghitung gaji karyawan. Berikut adalah langkah-langkah untuk menjalankan proyek ini:
+Proyek ini adalah sebuah sistem informasi berbasis laravel versi 8.x untuk menghitung gaji karyawan. Berikut adalah langkah-langkah untuk menjalankan proyek ini:
 
 1. Pertama, navigasikan ke direktori proyek menggunakan terminal:
    
