@@ -4,7 +4,6 @@
     <div class="container">
         <h2 style="text-align: center">Data Absensi Karyawan</h2>
 
-        <!-- Tambahkan tombol untuk membuat absensi -->
         <a href="{{ route('absensi.create') }}" class="btn btn-primary mb-3">Tambah Absensi</a>
 
         <form action="{{ route('absensi.index') }}" method="GET" class="filter-form">
@@ -70,7 +69,7 @@
                                     Karyawan Tidak Ditemukan
                                 @endif
                             </td>
-                            <td>{{ $data->tanggal_absensi }}</td> <!-- Menampilkan tanggal absensi -->
+                            <td>{{ $data->tanggal_absensi }}</td>
                             <td>{{ $data->status_absensi }}</td>
                         </tr>
                     @endforeach
