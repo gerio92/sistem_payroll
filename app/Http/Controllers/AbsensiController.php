@@ -10,10 +10,7 @@ class AbsensiController extends Controller
 {
     // Metode untuk menampilkan data absensi dengan filter berdasarkan karyawan dan periode absensi
     public function index(Request $request)
-{
-   // Query semua karyawan
-//    $karyawanQuery = Karyawan::query();
-    
+{   
     $karyawan = Karyawan::all();
     $filterKaryawanId = $request->input('karyawan_id');
     $filterPeriodeAbsensi = $request->input('periode_absensi');
@@ -39,9 +36,6 @@ class AbsensiController extends Controller
 
     return view('absensi.index', compact('absensi', 'karyawan', 'order', 'sort'));
 }
-
-
-
     // Metode untuk menampilkan laporan absensi dengan jumlah ketidakhadiran
     public function report(Request $request)
 {
@@ -66,10 +60,6 @@ class AbsensiController extends Controller
 
     return view('absensi.absensi_report', compact('absensiGrouped', 'karyawan'));
 }
-
-
-
-
     // Metode untuk menampilkan form tambah absensi
     public function create()
     {
