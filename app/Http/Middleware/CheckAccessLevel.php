@@ -30,7 +30,7 @@ class CheckAccessLevel
             // Pengguna bukan supervisor, periksa apakah adalah staff atau bukan
             if ($user->level === 'staff') {
                 // Pengguna adalah staff, cek rute yang diminta
-                if ($request->is('slipgaji')) {
+                if ($request->is('slipgaji', 'user')) {
                     // Jika pengguna mencoba mengakses /report, tampilkan pesan 403
                     abort(403, 'Forbidden: Anda tidak memiliki akses ke rute ini.');
                 } else {
