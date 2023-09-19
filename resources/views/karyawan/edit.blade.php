@@ -28,15 +28,13 @@
             <select class="form-select" id="status" name="status">
                 <option value="Tetap" {{ $karyawan->status == 'Tetap' ? 'selected' : '' }}>Tetap</option>
                 <option value="Kontrak" {{ $karyawan->status == 'Kontrak' ? 'selected' : '' }}>Kontrak</option>
-                <option value="HL" {{ $karyawan->status == 'HL' ? 'selected' : '' }}>Harian Lepas</option> <!-- Tambahkan opsi HL -->
+                <option value="HL" {{ $karyawan->status == 'HL' ? 'selected' : '' }}>Harian Lepas</option>
             </select>
         </div>
-        <!-- Ubah format dari Rp 5.000.000 menjadi numerik -->
         <div class="mb-3">
             <label for="gaji_pokok" class="form-label">Gaji Pokok</label>
             <input type="text" class="form-control" id="gaji_pokok" name="gaji_pokok" value="{{ $karyawan->gaji_pokok }}">
         </div>
-        <!-- Ubah format dari Rp 500.000 menjadi numerik -->
         <div class="mb-3">
             <label for="tunjangan" class="form-label">Tunjangan</label>
             <input type="text" class="form-control" id="tunjangan" name="tunjangan" value="{{ $karyawan->tunjangan }}">
